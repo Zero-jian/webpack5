@@ -1,9 +1,13 @@
 <template>
-  <div>{{ message }}</div>
+  <router-view></router-view>
 </template>
 
 <script>
+import Home from './home.vue'
 export default {
+  components: {
+    Home
+  },
   data() {
     return {
       message: "Hello Vue",

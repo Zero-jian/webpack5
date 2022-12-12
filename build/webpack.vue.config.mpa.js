@@ -15,7 +15,8 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 module.exports = {
   mode: "development",
   entry: {
-    index: path.resolve(__dirname, "../src/main.js"),
+    home: path.resolve(__dirname, '../src/mpa/home.js'),
+    login: path.resolve(__dirname, '../src/mpa/login.js')
   },
   output: {
     filename: "js/[name].js",
@@ -60,10 +61,15 @@ module.exports = {
       jQuery: "jquery",
     }),
     new HtmlWebpackPlugin({
-      filename: "index.html",
+      filename: "home.html",
       template: path.resolve(__dirname, "../public/index.html"),
-      chunks: ["index"],
+      chunks: ["home"],
     }),
+    new HtmlWebpackPlugin({
+        filename: "login.html",
+        template: path.resolve(__dirname, "../public/index.html"),
+        chunks: ["login"],
+      }),
     new CopyWebpackPlugin({
       patterns: [
         {
