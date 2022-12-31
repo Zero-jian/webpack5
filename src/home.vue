@@ -27,7 +27,7 @@
           </div>
         </div>
         <ul class="clearfix" id="bott">
-          <li><a href="index.html"><%=title %></a></li>
+          <li><a href="index.html"></a></li>
           <li>
             <a href="#">所有商品</a>
             <div class="sList">
